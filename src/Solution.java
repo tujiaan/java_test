@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Stack;
 
 /**
  2  * 快速排序：Java
@@ -118,6 +120,10 @@ import java.util.*;
         }
     }
     private static int NumberOf1(int n) {
+        /**
+         * @use return the count of 1 in a int number (binary form)
+         * @undo understand the principle  of  original code  opposite code etc...
+         * */
         int num=0;
         String data;
         if(n>=0) {
@@ -134,18 +140,66 @@ import java.util.*;
        return num;
 
     }
-    public static double Power(double base, int exponent) {
+
+    private static double Power(double base, int exponent) {
+        /**
+         * @use solve math pow(x,y)
+         * */
         double sum=1.0;
         int i=0;
-        if(base==0.0||exponent==0){
+        if (base == 0.0 || exponent == 0) {
             return 1.0;
         }
         while(i<=exponent){
-            sum*=base;
+            sum *= 2.0;
             i++;
         }
         return sum;
     }
+
+    private static int ReverseList(ListNode head) {
+        /**
+         * @doc reverse ListNode(pre defined) and return the headNode
+         * @input defined listNode head
+         * @return the head of the ListNode
+         * @ideal use three pointer to record and point to the node
+         * */
+        ListNode pre = head;
+        ListNode cur = head.next;
+        ListNode nex = cur.next;
+        pre.next = null;
+        cur.next = pre;
+        while (nex != null) {
+            pre = cur;
+            cur = nex;
+            nex = cur.next;
+            cur.next = pre;
+
+        }
+        return cur.val;
+
+    }
+
+    private static int maxSubArray(int[] nums) {
+        /**
+         * @use get the max continue sequence's sum
+        //         * */
+
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            int sum = nums[i];
+            list.add(sum);
+            for (int j = i + 1; j < nums.length; j++) {
+                sum += nums[j];
+                list.add(sum);
+            }
+        }
+        return Collections.max(list);
+    }
+
 
     public static void main(String[] args) {
 //        StringBuffer stringBuffer=new StringBuffer("we are happy");
@@ -163,8 +217,20 @@ import java.util.*;
 //           System.out.println(JumpFloorII(5));
 //         System.out.println(Solution.RectCover(10));
 //         System.out.println(Solution.NumberOf1(10));
-        System.out.println(Solution.Power(2.0,4));
+        //System.out.println(Solution.Power(2.0,4));
+        ListNode a1 = new ListNode(1);
+        ListNode a2 = new ListNode(2);
+        ListNode a3 = new ListNode(3);
+        ListNode a4 = new ListNode(4);
+        ListNode a5 = new ListNode(5);
+        a1.next = a2;
+        a2.next = a3;
+        a3.next = a4;
+        a4.next = a5;
 
+        //System.out.println(Solution.ReverseList(a1));
+        int[] array = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(Solution.maxSubArray(array));
      }
 
  }

@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Stack;
 
 public class Poland {
     /**
@@ -6,7 +8,7 @@ public class Poland {
      * @time 2019-11-8
      * @doc shixianninolanbianhuanhezhongzhiubianhouzhui
      */
-    private static String middleTolast(){
+    private static String middleToLast() {
         Scanner scanner =new Scanner(System.in);
         System.out.println("please enter expression:");
         char[] exp=scanner.next().toCharArray();
@@ -48,11 +50,38 @@ public class Poland {
 
     }
     private static int reversedPoland(String input){
-        return 0;
+        Stack<String> stack = new Stack<>();
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == '+') {
+                Integer a = Integer.parseInt(stack.pop());
+                Integer b = Integer.parseInt(stack.pop());
+                stack.push(Integer.toString(a + b));
+
+            } else if (input.charAt(i) == '-') {
+                Integer a = Integer.parseInt(stack.pop());
+                Integer b = Integer.parseInt(stack.pop());
+                stack.push(Integer.toString(b - a));
+
+            } else if (input.charAt(i) == '*') {
+                Integer a = Integer.parseInt(stack.pop());
+                Integer b = Integer.parseInt(stack.pop());
+                stack.push(Integer.toString(a * b));
+            } else if (input.charAt(i) == '/') {
+
+                Integer a = Integer.parseInt(stack.pop());
+                Integer b = Integer.parseInt(stack.pop());
+                stack.push(Integer.toString(b / a));
+            } else {
+                stack.push(Character.toString(input.charAt(i)));
+            }
+
+        }
+        return Integer.parseInt(stack.pop());
     }
 
     public static void main(String[] args) {
-        System.out.println(Poland.middleTolast());
+//        System.out.println(Poland.middleToLast());
+        System.out.println(Poland.reversedPoland(Poland.middleToLast()));
 
     }
 }

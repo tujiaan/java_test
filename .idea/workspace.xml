@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6508c09-2588-4bb3-929c-35439f38ff10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.ignore" beforeDir="false" afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Example.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Father.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/META-INF/test.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Poland.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Son$Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/test/Son.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +36,7 @@
   <component name="ProjectId" id="1Smol3VrUomFC1JyJlFMJDUZIcc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../com.java.test/src" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
