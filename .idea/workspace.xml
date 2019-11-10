@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6508c09-2588-4bb3-929c-35439f38ff10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/test/Example.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/Father.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/META-INF/test.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/Poland.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/Son$Operator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/test/Son.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +23,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Smol3VrUomFC1JyJlFMJDUZIcc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../com.java.test/src" />
@@ -55,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Poland">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Example" />
       <module name="test" />
@@ -86,9 +84,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Poland" />
         <item itemvalue="Application.Son" />
-        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Example" />
       </list>
     </recent_temporary>
@@ -104,6 +102,14 @@
       <option name="presentableId" value="Default" />
       <updated>1572178279947</updated>
     </task>
+    <task id="LOCAL-00001" summary="1-4 achieve reversed poland and the max subarray">
+      <created>1573307573159</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573307573164</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,12 +123,18 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1-4 achieve reversed poland and the max subarray" />
+    <option name="LAST_COMMIT_MESSAGE" value="1-4 achieve reversed poland and the max subarray" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>99</line>
+          <line>102</line>
           <properties class="Solution" method="JumpFloorII">
             <option name="EMULATED" value="true" />
           </properties>

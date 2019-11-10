@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.Stack;
 
 /**
@@ -200,6 +201,32 @@ import java.util.Stack;
         return Collections.max(list);
     }
 
+    private static void test() {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        int totalRow = scanner.nextInt();
+        int i = 0;
+        while (i < totalRow) {
+            String[] str = scanner.nextLine().split(" ");
+            ArrayList<Integer> arrayList1 = new ArrayList<>();
+            for (String s : str) {
+                arrayList1.add(Integer.parseInt(s));
+            }
+            int a = arrayList1.get(0);
+            int b = arrayList1.get(1);
+            int c = arrayList1.get(2);
+
+            if (b < 1 && c < 1) {
+                arrayList.add(0);
+            } else if (a + b + c < 3) {
+                arrayList.add(0);
+            } else {
+                arrayList.add((a + b + c) / 3);
+            }
+            i++;
+        }
+        arrayList.stream().forEach((var) -> System.out.println(var + "\n"));
+    }
 
     public static void main(String[] args) {
 //        StringBuffer stringBuffer=new StringBuffer("we are happy");
