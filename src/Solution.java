@@ -226,11 +226,10 @@ import java.util.Stack;
 //
 //
 //    }
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        ArrayList<Integer> arrayList1;
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
-            arrayList1 = new ArrayList<>();
+            ArrayList<Integer> arrayList = new ArrayList<>();
+            ArrayList<Integer> arrayList1 = new ArrayList<>();
             int n = in.nextInt();
             for (int i = 0; i < 3 * n; i++) {
                 arrayList.add(in.nextInt());
