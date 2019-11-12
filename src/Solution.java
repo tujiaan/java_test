@@ -202,30 +202,55 @@ import java.util.Stack;
     }
 
     private static void test() {
-        Scanner scanner = new Scanner(System.in);
+//        Scanner in = new Scanner(System.in);
+//        while(in.hasNext()){
+//            int n = in.nextInt();
+//            int m = in.nextInt();
+//            HashSet<Integer> hashset = new HashSet<Integer>();
+//            for(int i = 0; i < n; i++){
+//                hashset.add(in.nextInt());
+//            }
+//            for(int i = 0; i < m; i++){
+//                hashset.add(in.nextInt());
+//            }
+//            Object[] arr = hashset.toArray();
+//            int[] array = new int[arr.length];
+//            for(int i = 0; i < array.length; i++){
+//                array[i] = (int) arr[i];
+//            }
+//            Arrays.sort(array);
+//            for(int i = 0; i < array.length; i++){
+//                System.out.print(array[i]+" ");
+//            }
+//        }
+//
+//
+//    }
         ArrayList<Integer> arrayList = new ArrayList<>();
-        int totalRow = scanner.nextInt();
-        int i = 0;
-        while (i < totalRow) {
-            String[] str = scanner.nextLine().split(" ");
-            ArrayList<Integer> arrayList1 = new ArrayList<>();
-            for (String s : str) {
-                arrayList1.add(Integer.parseInt(s));
+        ArrayList<Integer> arrayList1;
+        Scanner in = new Scanner(System.in);
+        while (in.hasNext()) {
+            arrayList1 = new ArrayList<>();
+            int n = in.nextInt();
+            for (int i = 0; i < 3 * n; i++) {
+                arrayList.add(in.nextInt());
             }
-            int a = arrayList1.get(0);
-            int b = arrayList1.get(1);
-            int c = arrayList1.get(2);
+            for (int i = 0; i < arrayList.size() / 3; i++) {
+                int a = arrayList.get(3 * i);
+                int b = arrayList.get(3 * i + 1);
+                int c = arrayList.get(3 * i + 2);
+                if (b < 1 && c < 1) {
+                    arrayList1.add(0);
+                } else if (a + b + c < 3) {
+                    arrayList1.add(0);
+                } else {
+                    arrayList1.add((a + b + c) / 3);
+                }
 
-            if (b < 1 && c < 1) {
-                arrayList.add(0);
-            } else if (a + b + c < 3) {
-                arrayList.add(0);
-            } else {
-                arrayList.add((a + b + c) / 3);
             }
-            i++;
+            arrayList1.forEach(System.out::println);
         }
-        arrayList.stream().forEach((var) -> System.out.println(var + "\n"));
+
     }
 
     public static void main(String[] args) {
@@ -256,8 +281,9 @@ import java.util.Stack;
         a4.next = a5;
 
         //System.out.println(Solution.ReverseList(a1));
-        int[] array = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
-        System.out.println(Solution.maxSubArray(array));
-     }
+//        int[] array = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
+//        System.out.println(Solution.maxSubArray(array));
+        Solution.test();
+    }
 
  }
